@@ -96,7 +96,7 @@ const Auth = props => {
       />
     );
   }
-  console.log(authRedirectUrl);
+
   if (isAuthenticated) {
     return <Redirect to={authRedirectUrl} />;
   }

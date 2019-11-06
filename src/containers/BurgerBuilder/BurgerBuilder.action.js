@@ -1,7 +1,5 @@
 import * as types from "./BurgerBuild.types";
 
-import axios from "../../axios-orders";
-
 export const addIngredient = ingredientName => ({
   type: types.ADD_INGREDIENT,
   payload: { ingredientName }
@@ -23,14 +21,5 @@ export const setError = error => ({
 });
 
 export const initIngredients = () => {
-  return dispatch => {
-    axios
-      .get("https://burger-builder-4cf83.firebaseio.com/ingredients.json")
-      .then(res => {
-        dispatch(fetchIngredient(res.data));
-      })
-      .catch(error => {
-        dispatch(setError(error));
-      });
-  };
+  return { type: types.INIT_INGREDIENTS };
 };

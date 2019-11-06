@@ -43,6 +43,8 @@ const authReducer = (state = initialState, action) => {
       return authLogout(state, action);
     case types.SET_AUTH_REDIRECT_URL:
       return updateObject(state, { authRedirectUrl: action.payload });
+    case types.AUTH_INIT_LOGOUT:
+      return updateObject(state, { authRedirectUrl: action.payload });
     default:
       return state;
   }

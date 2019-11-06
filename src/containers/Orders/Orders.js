@@ -16,7 +16,7 @@ const Orders = props => {
     if (userId) {
       fetchOrders(token, userId);
     }
-  }, [userId]);
+  }, [fetchOrders, userId, token]);
 
   return (
     <>

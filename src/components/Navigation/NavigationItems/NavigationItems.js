@@ -1,10 +1,10 @@
 import React from "react";
 
 import { connect } from "react-redux";
-import Button from "../../UI/Button/Button";
+// import Button from "../../UI/Button/Button";
 import NavigationItem from "./NavigationItem/NavigationItem";
 
-import * as actions from "../../../containers/Auth/Auth.actions";
+// import * as actions from "../../../containers/Auth/Auth.actions";
 
 import "./NavigationItems.css";
 
